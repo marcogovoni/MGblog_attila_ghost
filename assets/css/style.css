@@ -613,6 +613,27 @@ visualizzato nel menu in alto solo da desktop, su mobile no*/
   margin-left: 3rem;
 }
 
+/* stile per il footer con disclaimer */
+.footer-end {
+  flex-shrink: 0;
+  display: block;
+  font-size: 1.6em;
+  line-height: 2rem;
+  color: #73777d;
+  text-align-last: center;
+}
+
+/* stile per box newsletter */
+.box-newsletter {
+  position: relative;
+  padding: 1rem 0;
+  margin: 1em 0;
+  text-align: center;
+  background: #3b3d40;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 /* fine extra CSS */
 body {
   font-family: var(--font-primary);

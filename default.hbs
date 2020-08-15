@@ -11,7 +11,6 @@
 
 	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 
-
 	{{ghost_head}}
 </head>
 
@@ -101,6 +100,8 @@
 			<div class="search-close"></div>
 		</div>
 
+<!-- modificato messaggio footer ed aggiunto link privacy -->
+
 		<div class="nav-footer">
 			<nav class="nav-wrapper" aria-label="{{t "Footer"}}">
 				{{#if @site.secondary_navigation}}
@@ -108,8 +109,12 @@
 				{{else}}
 				<span class="nav-copy">{{@site.title}} &copy; {{date format='YYYY'}}</span>
 				{{/if}}
-				<span class="nav-credits">{{t "Published with"}} <a href="https://ghost.org">Ghost</a> &bull; {{t "Theme" }} <a href="https://github.com/zutrinken/attila">Attila</a></span>
+				<span class="nav-credits">{{t "Pubblicato con Ghost. Tema personale... "}} <a style="color: #73777d" href="https://github.com/marcogovoni/MGblog_attila_ghost">Attila's Fork</a></span>
 			</nav>
+			<span class="footer-end"><br>{{@site.title}} &copy; {{date format='YYYY'}} {{t " | Marco Govoni PIVA IT01861120382 | "}}
+				<a style="color: #73777d" href="https://www.iubenda.com/privacy-policy/75534352" target="_blank">Privacy</a>
+
+			</span>
 		</div>
 
 	</section>
