@@ -19,6 +19,7 @@
 		</div>
 		{{/if}}
 	</div>
+
 </header>
 
 <!-- richiama tutti i tag con il contatore di articoli e li stampa con link -->
@@ -29,6 +30,7 @@
 
 			<section class="post-content">
 				{{content}}
+
 				{{#get "tags" limit="all" include='count.posts' order='count.posts desc'}}
         				{{#foreach tags}}
                 				<h2> <a href="{{url}}">{{name}} {{count.posts}} </a> </h2>

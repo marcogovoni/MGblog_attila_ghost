@@ -10,6 +10,8 @@ $breakpoint-large: 960px;
 $breakpoint-medium: 640px;
 $breakpoint-small: 480px;
 $inner: calc(64rem + 8vw);
+
+
 /* ==========================================================================
    Basics
    ========================================================================== */
@@ -27,6 +29,41 @@ html {
 html.menu-active {
 	overflow-y: hidden;
 }
+
+/* Extra CSS
+Modifiche personalizzate per il blog */
+
+/* bottone per accesso pagina consulenze */
+.bott {
+ 
+ /* display: inline-block; */
+ 	text-align: center;
+ 	white-space: nowrap;
+ 	color: white;
+ 	text-decoration: none;
+ 	line-height: 3;
+ 	font-weight: bold;
+ 	font-size: 1.4em;
+ 	background-color: #F5C443;
+ 	border-radius: 2px;
+ 	padding: 5px 9px;
+ 	cursor: pointer;
+}
+
+.bott:hover {
+ background-color: $color-primary;
+}
+
+/* container del bottone
+visualizzato nel menu in alto solo da desktop, su mobile no*/
+
+.head-bot {
+	padding: 0rem;
+	margin-left: 3rem;
+	
+	}
+
+/* fine extra CSS */
 
 body {
 	font-family: var(--font-primary);
@@ -1292,9 +1329,12 @@ textarea {
 }
 /* ==========================================================================
    Navigation
-   ========================================================================== */
+   ==========================================================================
+
+   modificato da position:absolut a fixed ed aggiunto background; */
 .nav-header {
-	position: absolute;
+	position: fixed;
+	background-color: #1b1b1b;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -1344,6 +1384,7 @@ textarea {
 	transition: all linear 0.1s;
 	@media (prefers-color-scheme: dark) {
 		color: $color-text-secondary-dark;
+		background-color: #1b1b1b;
 	}
 	@media only screen and (max-width: $breakpoint-medium) {
 		display: block;
@@ -1388,8 +1429,10 @@ textarea {
 	color: #FFF;
 }
 
+/* backround menu mobile cambiato */
+
 .menu-active .nav-header .nav-wrapper-control {
-	background: $color-neutral-15;
+	background: #1b1b1b;
 	color: $color-text-secondary;
 	border-color: $color-border-dark;
 	@supports (-webkit-backdrop-filter: blur(2rem)) {
@@ -1404,6 +1447,7 @@ textarea {
 		}
 	}
 }
+
 
 .nav-header .nav-wrapper {
 	display: flex;

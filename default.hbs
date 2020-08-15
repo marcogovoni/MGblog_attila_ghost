@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
 
+
 	{{ghost_head}}
 </head>
 
@@ -24,12 +25,20 @@
 				</span>
 				{{/if}}
 				{{navigation}}
+<!-- span del bottone consulenze desktop-->
+				<span class="head-bot">
+					<a  class="bott" href="https://www.mrwebmaster.it">Consulenze</a>
+				</span>
+
 				<ul class="nav-side">
+
+<!-- inserito link diretto account LinkedIn -->
+					
 					{{#if @site.twitter}}
-					<li class="nav-twitter"><a aria-label="Twitter" href="{{twitter_url}}" title="{{@site.twitter}}" target="_blank"><i class="icon icon-twitter" aria-hidden="true"></i></a></li>
+					<li class="nav-twitter"><a aria-label="Twitter" href="{{twitter_url}}" title="Twitter" target="_blank"><i class="icon icon-twitter" aria-hidden="true"></i></a></li>
 					{{/if}}
 					{{#if @site.facebook}}
-					<li class="nav-facebook"><a aria-label="Facebook" href="{{facebook_url}}" title="{{@site.facebook}}" target="_blank"><i class="icon icon-facebook" aria-hidden="true"></i></a></li>
+					<li class="nav-facebook"><a aria-label="Facebook" href="https://www.linkedin.com/in/govonimarco/" title="LinkedIn" target="_blank"><i class="icon icon-linkedin" aria-hidden="true"></i></a></li>
 					{{/if}}
 					{{#if @labs.subscribers}}
 					<li class="nav-subscribe"><a title="{{t "Subscribe"}}" href="{{@site.url}}/subscribe/" target="_blank"><i class="icon icon-mail" aria-hidden="true"></i></a></li>
@@ -42,6 +51,12 @@
 		<div class="nav-wrapper-control">
 			<div class="inner">
 				<a class="nav-menu" role="button"><i class="icon icon-menu" aria-hidden="true"></i>{{t "Menu"}}</a>
+				{{#if @site.logo}}
+				<span>
+					<a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" align="center" height="25" alt="{{t "Logo"}}" /></a>
+				</span>
+				{{/if}}
+
 				<a class="nav-search" style="display: none;" title="{{t "Search"}}" role="button"><i class="icon icon-search" aria-hidden="true"></i></a>
 			</div>
 		</div>
